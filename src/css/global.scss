@@ -1,0 +1,197 @@
+
+
+.flex{
+    display: flex;
+
+    &.item-center{
+        align-items: center;
+    }
+
+    &.content-center{
+        justify-content: center;
+    }
+
+    &.content-sb{
+        justify-content: space-between;
+    }
+
+    &.direction{
+        &-column{
+            flex-direction: column;
+        }
+    }
+
+}
+
+.h{
+    &-100vh{
+        height: 100vh;
+    }
+    &-100{
+        height: 100%;
+    }
+}
+
+.bg{
+    &-purple{
+        background-color: #6200ed;
+    }
+}
+
+.MainCard{
+    max-width: 900px;
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.text{
+    &-large{
+        font-size: 35px;
+    }
+    &-small{
+        font-weight: 300;
+    }
+
+    &-medium{
+        font-size: 18px;
+        font-weight: 300;
+
+        &-large{
+            font-size: 22px;
+            font-weight: 600;
+        }
+    }
+
+    &-500{
+        font-weight: 500 !important;
+    }
+    
+    &-center{
+        text-align: center;
+    }
+
+    &-color{
+        &-white{
+            color: white;
+        }
+        &-purple{
+            color: #6200ed;
+        }
+    }
+}
+.relative{
+    position: relative;
+}
+
+.FormCard{
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    width: 300px;
+    height: calc(100% + 100px);
+    background-color: white;
+    border-radius: 12px;
+    padding: 50px 13px;
+}
+
+.shadow{
+    box-shadow: 0px 0px 80px 0px #00000075;
+}
+
+.input{
+    &-group{
+        width: 100%;
+        margin-bottom: 20px;
+        height: 40px;
+        position: relative;
+        margin-top: 10px;
+
+
+        label{
+            position: absolute;
+            bottom: 5px;
+            left: 20px;
+            transition: all 300ms ;
+            // height: 100%;
+        }
+
+        input{
+            outline: none;
+            border: none;
+            width: 100%;
+            padding-left: 20px;
+            border-bottom: 2px solid silver;
+
+            &:active,
+            &:focus,
+            &:valid
+            {
+
+                border-bottom-color: #6200ed;
+
+                & ~ label{
+                    color: #6200ed;
+                    transform: translateY(-100%);
+                    left: 10px;
+                }
+            }
+        }
+    }
+
+    
+}
+
+.mx{
+    &-auto{
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+
+.circle-ball{
+    width: 90px;
+    height: 90px;
+    background-color: #6200ed;
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+
+    .half-circle{
+        width: 100%;
+        height: 100%;
+        background-color: #e0e0e0a4;
+        transform-origin: 100% 50%;
+        transform: translateX(-50%) rotate(-45deg);
+    }
+}
+
+.btn{
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 25px 0;
+    background-color: white;
+    color: #6200ed;
+
+    a{
+        color: #6200ed;
+    }
+
+
+    &-primary{
+        background-color: #6200ed;
+        color: white;
+    }
+}
+
+a{
+    text-decoration: none;
+}
